@@ -1,0 +1,4 @@
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/book/\",\"status\":\"500\",\"responseTime\":\"18.583\"}","timestamp":"2024-09-16T07:12:57.645Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"POST\",\"url\":\"/api/book/\",\"status\":\"500\",\"responseTime\":\"16.382\"}","timestamp":"2024-09-16T07:57:06.459Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api/book/search/1?author=an\",\"status\":\"200\",\"responseTime\":\"34.489\"}","timestamp":"2024-09-16T07:57:14.351Z"}
+{"level":"\u001b[32minfo\u001b[39m","message":"{\"method\":\"GET\",\"url\":\"/api/book/1\",\"status\":\"200\",\"responseTime\":\"16.340\"}","timestamp":"2024-09-16T07:57:22.543Z"}
