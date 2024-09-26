@@ -9,6 +9,7 @@ async function register(req, res, next) {
       const existing_user = await User.find({ email: req.body.email });
 
       if (existing_user.length != 0) {
+         const error = {};
          error.status = 400;
          error.message = 'user already exist';
          next(error);
@@ -17,10 +18,12 @@ async function register(req, res, next) {
       console.log('register method');
       const password = req.body.password;
       if (password.length < 6) {
+         const error = {};
          error.status = 400;
          error.message = 'password length should be atleast 6';
          next(error);
       }
+      
       const saltRounds = 10;
       const hashedPassword = await bcrypt.hash(password, saltRounds);
 
@@ -55,11 +58,13 @@ async function login(req, res, next) {
                token: jwt_token
             });
          } else {
+            const error = {};
             error.status = 404;
             error.message = 'email or password are invalid';
             next(error);
          }
       } else {
+         const error = {};
          error.status = 404;
          error.message = 'email or password are invalid';
          next(error);
