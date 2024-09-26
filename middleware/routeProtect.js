@@ -12,14 +12,16 @@ async function isTokenCorrect(req,res,next){
              if(isValid){
                 next();
              }else{
+                const error = {};  
                 error.message = 'Unauthorized credentials';
                 error.status = 401;
                 next(error);
              }
          }else{
-            error.message = 'Unauthorized credentials';
-                error.status = 401;
-                next(error);
+              const error = {};
+              error.message = 'Unauthorized credentials';
+              error.status = 401;
+              next(error);
          }
      }catch(error){
         error.status = 401;
