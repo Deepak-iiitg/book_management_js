@@ -27,11 +27,12 @@ async function deleteBook(req,res,next){
 }
 async function updateBook(req,res,next){
    try{
-      const _id = req.params._id;
+        const _id = req.params._id;
 
         const updatedData = req.body;
         const olderData = await Book.findById(_id);
         if(olderData===null){
+         const error = {};
          error.status = 404;
          error.message = 'requested data is not found';
          next(error);
